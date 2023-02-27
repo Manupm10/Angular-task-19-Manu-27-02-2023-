@@ -1,3 +1,4 @@
+import { PostService } from './post.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'httpMethods';
+
+  constructor(private service:PostService){}
+  
+  isloading=this.service.isLoading;
 }
